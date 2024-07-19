@@ -1,0 +1,16 @@
+student_id,subject,grade
+01,Math,A
+01,English,B+
+01,Science,A-
+02,Math,B
+02,English,A
+02,Science,B+
+03,Math,C
+03,English,B-
+03,Science,C+
+04,Math,A-
+04,English,A
+04,Science,B+
+05,Math,B+
+05,English,A-
+05,Science,B

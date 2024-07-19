@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="911.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sms.AdminDashboardController">
+   <children>
+      <AnchorPane prefHeight="565.0" prefWidth="238.0" style="-fx-background-color: #187937;">
+         <children>
+            <Button fx:id="manageStudentsBtn" layoutX="19.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#onManageStudentsBtn" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: #D9D9D9;" />
+            <Label layoutX="47.0" layoutY="130.0" text="Manage Students">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="manageTeachersBtn" layoutX="23.0" layoutY="228.0" mnemonicParsing="false" onMouseClicked="#openManageTeachers" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: #D9D9D9;" />
+            <Label layoutX="51.0" layoutY="234.0" text="Manage Teachers">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="manageStaffsBtn" layoutX="23.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#handleManageStaffs" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: #D9D9D9;" />
+            <Label layoutX="52.0" layoutY="182.0" text="Manage Staffs">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="openPaymentBtn" layoutX="23.0" layoutY="283.0" mnemonicParsing="false" onMouseClicked="#openPayments" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: #D9D9D9;" />
+            <Label layoutX="69.0" layoutY="289.0" text="Payments">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="studentReportNav" layoutX="23.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#openStudentReport" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: #D9D9D9;" />
+            <Label layoutX="51.0" layoutY="344.0" text="Student Report">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="viewResultsBtn" layoutX="23.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#openViewResults" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: #D9D9D9;" />
+            <Label layoutX="61.0" layoutY="395.0" text="View Results">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="adminDashboardLogout" layoutX="23.0" layoutY="487.0" mnemonicParsing="false" onMouseClicked="#onAdminDashboardLogout" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: #D9D9D9;" />
+            <Label layoutX="72.0" layoutY="493.0" text="Logout">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Line endX="137.40000915527344" endY="7.62939453125E-6" layoutX="101.0" layoutY="110.0" startX="-100.0" style="-fx-stroke: #fff;" />
+            <Label layoutX="25.0" layoutY="72.0" text="Welcome ,Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="276.0" layoutY="54.0" prefHeight="214.0" prefWidth="270.0" style="-fx-background-color: #187937;">
+         <children>
+            <Label layoutX="135.0" layoutY="35.0" prefHeight="28.0" prefWidth="115.0" text="Total Students" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="237.0" layoutY="172.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="595.0" layoutY="54.0" prefHeight="214.0" prefWidth="270.0" style="-fx-background-color: #187937;">
+         <children>
+            <Label layoutX="135.0" layoutY="35.0" prefHeight="28.0" prefWidth="115.0" text="Total Teachers" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="237.0" layoutY="172.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
