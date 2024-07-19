@@ -47,7 +47,6 @@ public class ManageTeacherController {
     @FXML
     private Button manageStaffs;
 
-
     @FXML
     private Button manageTeacherBtn;
 
@@ -59,6 +58,9 @@ public class ManageTeacherController {
 
     @FXML
     private Button viewResultsBtn;
+
+    @FXML
+    private Button createMcqsBtn;
 
     @FXML
     private Button logout;
@@ -247,6 +249,16 @@ public class ManageTeacherController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
         Parent root = loader.load();
         stage.setTitle("Student Management System");
+        stage.setScene(new Scene(root));
+    }
+
+    @FXML
+    public void openCreateMcqs(MouseEvent mouseEvent) throws IOException {
+        Stage stage = (Stage) createMcqsBtn.getScene().getWindow(); // Cast this window to become a stage
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("create-mcqs.fxml"));
+        Parent root = loader.load();
+        stage.setTitle("Student Management System - create MCQs");
         stage.setScene(new Scene(root));
     }
 }

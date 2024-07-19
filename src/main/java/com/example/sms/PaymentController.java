@@ -61,6 +61,9 @@ public class PaymentController {
     private Button viewResultsBtn;
 
     @FXML
+    private Button createMcqsBtn;
+
+    @FXML
     private Button logout;
 
 
@@ -240,6 +243,16 @@ public class PaymentController {
         stage.setTitle("Student Management System - check student results");
         stage.setScene(new Scene(root));
 
+    }
+
+    @FXML
+    public void openCreateMcqs(MouseEvent mouseEvent) throws IOException {
+        Stage stage = (Stage) createMcqsBtn.getScene().getWindow(); // Cast this window to become a stage
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("create-mcqs.fxml"));
+        Parent root = loader.load();
+        stage.setTitle("Student Management System - create MCQs");
+        stage.setScene(new Scene(root));
     }
 
     @FXML

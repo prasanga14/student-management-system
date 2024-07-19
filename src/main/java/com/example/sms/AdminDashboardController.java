@@ -17,6 +17,9 @@ public class AdminDashboardController {
     private Button manageStudentsBtn;
 
     @FXML
+    private Button manageTeachersBtn;
+
+    @FXML
     private Button adminDashboardLogout;
 
     @FXML
@@ -30,6 +33,9 @@ public class AdminDashboardController {
 
     @FXML
     private Button viewResultsBtn;
+
+    @FXML
+    private Button createMcqsBtn;
 
 
     @FXML
@@ -66,7 +72,7 @@ public class AdminDashboardController {
     }
 
     public void openManageTeachers(MouseEvent mouseEvent) throws IOException {
-        Stage stage = (Stage) manageStaffsBtn.getScene().getWindow(); // Cast this window to become a stage
+        Stage stage = (Stage) manageTeachersBtn.getScene().getWindow(); // Cast this window to become a stage
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("manage-teachers.fxml"));
         Parent root = loader.load();
@@ -102,6 +108,16 @@ public class AdminDashboardController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("check-results.fxml"));
         Parent root = loader.load();
         stage.setTitle("Student Management System - view results");
+        stage.setScene(new Scene(root));
+    }
+
+    @FXML
+    public void openCreateMcqs(MouseEvent mouseEvent) throws IOException {
+        Stage stage = (Stage) createMcqsBtn.getScene().getWindow(); // Cast this window to become a stage
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("create-mcqs.fxml"));
+        Parent root = loader.load();
+        stage.setTitle("Student Management System - create MCQs");
         stage.setScene(new Scene(root));
     }
 }
