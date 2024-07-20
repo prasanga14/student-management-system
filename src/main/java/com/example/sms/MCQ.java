@@ -17,11 +17,23 @@ public class MCQ {
         return question;
     }
 
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
     public List<String> getOptions() {
         return options;
     }
 
+    public void setOptions(List<String> options) {
+        this.options = options;
+    }
+
     public String getCorrectAnswer() {
         return correctAnswer;
+    }
+
+    public void setCorrectAnswer(String correctAnswer) {
+        this.correctAnswer = correctAnswer;
     }
 }

@@ -11,7 +11,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SolveMcqsController {
@@ -46,6 +50,7 @@ public class SolveMcqsController {
 
     private List<MCQ> mcqs;
     private int currentIndex = 0;
+    private List<String> results;
 
     @FXML
     public void initialize() {
@@ -54,7 +59,27 @@ public class SolveMcqsController {
     }
 
     private void loadQuestions() {
-        mcqs = MCQLoader.loadMCQs();
+        mcqs = new ArrayList<>();
+        results = new ArrayList<>();
+        String csvFile = "mcqs_records.csv"; // Update the path
+        String line;
+        String csvSplitBy = ",";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(csvSplitBy);
+                String question = data[0];
+                List<String> options = new ArrayList<>();
+                options.add(data[1]);
+                options.add(data[2]);
+                options.add(data[3]);
+                options.add(data[4]);
+                String correctAnswer = data[5];
+                mcqs.add(new MCQ(question, options, correctAnswer));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void displayQuestion() {
@@ -90,12 +115,15 @@ public class SolveMcqsController {
             MCQ currentMCQ = mcqs.get(currentIndex);
             boolean isCorrect = currentMCQ.getCorrectAnswer().equals(selectedOption);
 
+            results.add(currentMCQ.getQuestion() + "," + selectedOption + "," + (isCorrect ? "Correct" : "Wrong"));
+
             showAlert(isCorrect ? "Correct!" : "Wrong!");
 
             currentIndex++;
             if (currentIndex < mcqs.size()) {
                 displayQuestion();
             } else {
+                saveResults();
                 questionLabel.setText("You've completed the quiz!");
                 option1.setVisible(false);
                 option2.setVisible(false);
@@ -103,6 +131,17 @@ public class SolveMcqsController {
                 option4.setVisible(false);
                 submitButton.setDisable(true);
             }
+        }
+    }
+
+    private void saveResults() {
+        String csvFile = "mcq_results.csv";
+        try (FileWriter writer = new FileWriter(csvFile)) {
+            for (String result : results) {
+                writer.write(result + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
