@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="270.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="com.example.sms.controller.StudentDialogController">
+    <children>
+        <Label text="Student ID:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+        <TextField fx:id="studentIdField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+
+        <Label text="Username:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0" />
+        <TextField fx:id="usernameField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+
+        <Label text="Password:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
+        <TextField fx:id="passwordField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
+
+        <Label text="First Name:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0" />
+        <TextField fx:id="firstNameField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0" />
+
+        <Label text="Last Name:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="180.0" />
+        <TextField fx:id="lastNameField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="180.0" />
+
+        <Label text="Faculty:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="220.0" />
+        <TextField fx:id="facultyField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0" />
+
+        <Label text="Email Address:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="260.0" />
+        <TextField fx:id="emailAddressField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="260.0" />
+
+        <Label text="Phone No:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="300.0" />
+        <TextField fx:id="phoneNoField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="300.0" />
+
+        <Label text="Year:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
+        <TextField fx:id="yearField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="340.0" />
+
+        <Label text="Course:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0" />
+        <TextField fx:id="courseField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="380.0" />
+
+        <Label text="Section:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="420.0" />
+        <TextField fx:id="sectionField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="420.0" />
+
+        <Label text="Enrolled Date:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="460.0" />
+        <TextField fx:id="enrolledDateField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="460.0" />
+
+        <Label text="Status:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="500.0" />
+        <TextField fx:id="statusField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="500.0" />
+
+        <Label text="Gender:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="540.0" />
+        <TextField fx:id="genderField" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="540.0" />
+
+        <Button onAction="#handleSaveAction" prefWidth="100.0" style="-fx-background-color: #388E3C; -fx-text-fill: white; -fx-font-size: 14px;" text="Save" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+        <Button onAction="#handleCancelAction" prefWidth="100.0" style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 14px;" text="Cancel" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+    </children>
+</AnchorPane>
