@@ -1,5 +1,6 @@
 package com.example.sms.controller;
 
+import com.example.sms.utils.DataSingleton;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,10 +11,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class StudentReportController {
 
@@ -93,6 +94,8 @@ public class StudentReportController {
             return false;
         }
     }
+
+
 
     @FXML
     public void openManageStaffs(MouseEvent mouseEvent) throws IOException {

@@ -12,9 +12,16 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class StudentDashboardController implements Initializable {
 
@@ -53,6 +60,9 @@ public class StudentDashboardController implements Initializable {
     public void setName(String name){
         displayLoggedUser.setText(dataSingleton.getUserName());
     }
+
+
+
     @FXML
     public void openViewReport(MouseEvent mouseEvent) throws IOException {
         Stage stage = (Stage) viewReportBtn.getScene().getWindow(); // Cast this window to become a stage
